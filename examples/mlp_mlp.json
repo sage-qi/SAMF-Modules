@@ -1,0 +1,13 @@
+{
+  "description": "Synthetic input; MLP encoder, dimension projection, MLP head.",
+  "input": {"sequence_length": 16, "feature_channels": 8},
+  "alignment_dim": 64,
+  "encoder": {
+    "name": "MLPEncoder",
+    "params": {"output_dim": 32, "hidden_dim": 60, "layers_num": 3, "dropout": 0.2, "activation": "tanh"}
+  },
+  "predictor": {
+    "name": "MLPPredictor",
+    "params": {"hidden_dim": 32, "dropout": 0.2}
+  }
+}

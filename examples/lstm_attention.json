@@ -1,0 +1,13 @@
+{
+  "description": "Synthetic input; LSTM encoder and attentive-pooling regression head.",
+  "input": {"sequence_length": 16, "feature_channels": 8},
+  "alignment_dim": 64,
+  "encoder": {
+    "name": "LSTMEncoder",
+    "params": {"seq_len": 16, "hidden_dim": 128, "layers": 1, "dropout": 0.0, "projection_dim": 64}
+  },
+  "predictor": {
+    "name": "AttentivePoolingPredictor",
+    "params": {"seq_len": 8, "attn_hidden_dim": 128, "projection_dim": 128, "dropout": 0.1}
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "description": "Synthetic input; CNN encoder and Transformer-based regression head.",
+  "input": {"sequence_length": 16, "feature_channels": 8},
+  "alignment_dim": 64,
+  "encoder": {
+    "name": "CNNEncoder",
+    "params": {"seq_len": 16, "out_channels": 32, "kernel_size": 3, "dropout": 0.1, "projection_dim": 64}
+  },
+  "predictor": {
+    "name": "TransformerPredictor",
+    "params": {"seq_len": 8, "d_model": 128, "nhead": 4, "num_layers": 2, "dim_feedforward": 256, "dropout": 0.1}
+  }
+}

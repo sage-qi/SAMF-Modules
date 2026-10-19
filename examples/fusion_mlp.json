@@ -1,0 +1,13 @@
+{
+  "description": "Synthetic input; parallel CNN/LSTM fusion encoder and MLP head.",
+  "input": {"sequence_length": 16, "feature_channels": 8},
+  "alignment_dim": 64,
+  "encoder": {
+    "name": "SCCNNLSTMEncoder",
+    "params": {"seq_len": 16, "cnn_out_channels": 32, "cnn_kernel_size": 3, "cnn_dropout": 0.1, "lstm_hidden_dim": 64, "lstm_layers": 1, "lstm_dropout": 0.0, "projection_dim": 64}
+  },
+  "predictor": {
+    "name": "MLPPredictor",
+    "params": {"hidden_dim": 32, "dropout": 0.2}
+  }
+}
